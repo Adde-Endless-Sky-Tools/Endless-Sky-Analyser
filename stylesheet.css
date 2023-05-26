@@ -1,0 +1,65 @@
+/*	Constants	*/
+*{
+	-webkit-user-select:none;
+	color:#9f9f9f;
+	font-family:Ubuntu;
+	margin:0;
+	user-select:none;
+}
+body{
+	animation:highlightOff .5s;
+	background-color:#000;
+}
+label{
+	-webkit-animation:highlightOff .5s;
+	animation:highlightOff .5s;
+	cursor:pointer;
+	position:fixed;
+	text-shadow:-2px -2px 0 rgba(0,0,0,1),2px -2px 0 rgba(0,0,0,1),-2px 2px 0 rgba(0,0,0,1),2px 2px 0 rgba(0,0,0,1),-2px 0 0 rgba(0,0,0,1),2px 0 0 rgba(0,0,0,1),0 -2px 0 rgba(0,0,0,1),0 2px 0 rgba(0,0,0,1);
+	z-index:2;
+}
+label:hover{
+	animation:highlightOn .5s forwards;
+	cursor:pointer;
+}
+span{
+	position:absolute;
+}
+.blocked,
+.blocked label{
+	animation:none;
+	color:#333;
+	pointer-events:none;
+}
+.dark,
+.dark:hover{
+	animation:none;
+	color:#333;
+}
+.hidden{
+	display:none;
+}
+/*	Load	*/
+#loadFiles{
+	font-size:32px;
+	left:20px;
+	top:10px;
+}
+/*	Output	*/
+#output{
+	left:20px;
+	padding-bottom:20px;
+	position:absolute;
+	text-align:left;
+	top:70px;
+	white-space:pre-wrap;
+	width:calc(100% - 40px);
+}
+/*	Highlight	*/
+@keyframes highlightOff{
+	0%{color:#eee;}
+	100%{color:#9f9f9f;}
+}
+@keyframes highlightOn{
+	100%{color:#eee;}
+}

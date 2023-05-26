@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<title>Analyser</title>
+	</head>
+	<body onLoad="initialize()">
+		<!--	Upload	-->
+		<label id="loadFiles" for="file">&#10162; Upload Files</label>
+		<input class="hidden" id="file" type="file" webkitDirectory onChange="uploadFiles(this)"/>
+		<!--	Top level menu	-->
+		<label id="regenerators" class="blocked dark" style="left:280px;top:10px;" onClick="filterCalculations(this.id),printOutput()">Regenerators</label>
+		<label id="cooling" class="blocked dark" style="left:385px;top:10px;" onClick="filterCalculations(this.id),printOutput()">Cooling</label>
+		<label id="fuel" class="blocked dark" style="left:447px;top:10px;" onClick="filterCalculations(this.id),printOutput()">Fuel</label>
+		<label id="power" class="blocked dark" style="left:485px;top:10px;" onClick="filterCalculations(this.id),printOutput()">Power</label>
+		<label id="engines" class="blocked dark" style="left:538px;top:10px;" onClick="filterCalculations(this.id),printOutput()">Engines</label>
+		<!--	Bottom level menu	-->
+		<div id="regeneratorsSort" class="hidden">
+			<label id="ShieldSpace" class="dark" style="left:280px;top:30px;" onClick="sortRegenerators(4,this.id)">S/S</label>
+			<label id="ShieldEnergy" class="dark" style="left:330px;top:30px;" onClick="sortRegenerators(6,this.id)">S/E</label>
+			<label id="HullSpace" class="dark" style="left:370px;top:30px;" onClick="sortRegenerators(8,this.id)">H/S</label>
+			<label id="HullEnergy" class="dark" style="left:410px;top:30px;" onClick="sortRegenerators(10,this.id)">H/E</label>
+		</div>
+		<div id="coolingSort" class="hidden">
+			<label id="CoolingSpace" class="dark" style="left:280px;top:30px;" onClick="sortCooling(5,this.id)">C/S</label>
+		</div>
+		<div id="fuelSort" class="hidden">
+			<label id="FuelCapacitySpace" class="dark" style="left:280px;top:30px;" onClick="sortFuel(4,this.id)">C/S</label>
+			<label id="RamscoopSpace" class="dark" style="left:330px;top:30px;" onClick="sortFuel(6,this.id)">R/S</label>
+		</div>
+		<div id="powerSort" class="hidden">
+			<label id="EnergyGenerationSpace" class="dark" style="left:280px;top:30px;" onClick="sortPower(4,this.id)">G/S</label>
+			<label id="EnergyGenerationHeat" class="dark" style="left:330px;top:30px;" onClick="sortPower(6,this.id)">G/H</label>
+			<label id="EnergyCapacitySpace" class="dark" style="left:370px;top:30px;" onClick="sortPower(8,this.id)">C/S</label>
+		</div>
+		<div id="enginesSort" class="hidden">
+			<label id="ThrustSpace" class="dark" style="left:280px;top:30px;" onClick="sortEngines(4,this.id)">Th/S</label>
+			<label id="AfterburnerThrustSpace" class="dark" style="left:330px;top:30px;" onClick="sortEngines(6,this.id)">ATh/S</label>
+			<label id="ReverseThrustSpace" class="dark" style="left:400px;top:30px;" onClick="sortEngines(8,this.id)">RTh/S</label>
+			<label id="TurnSpace" class="dark" style="left:460px;top:30px;" onClick="sortEngines(10,this.id)">Tu/S</label>
+		</div>
+		<!--	Output	-->
+		<p id="output"></p>
+	</body>
+	<script type="text/javascript" src="scriptsheet.js"></script>
+</html>
