@@ -45,6 +45,27 @@ span{
 	left:20px;
 	top:10px;
 }
+/*	Tooltips	*/
+.tooltipBottom{
+	padding:2px;
+	padding-bottom:25px;
+}
+.tooltipBottom:hover:after{
+	background:#333;
+	background:rgba(0,0,0,.8);
+	border-radius:10px;
+	bottom:0;
+	color:#fff;
+	content:attr(tooltip);
+	left:50%;
+	max-width:400px;
+	padding:2px 15px;
+	position:absolute;
+	text-align:center;
+	transform:translate(-50%);
+	white-space:nowrap;
+	width:20px;
+}
 /*	Output	*/
 #output{
 	left:20px;

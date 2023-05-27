@@ -1,5 +1,9 @@
 # Analyser
 ## 2nd June 2023
+### Major
+```diff
++	Reveal tooltips for calculation columns, explaining the full equation
+```
 ### Minor
 - Hide irrelevant calculations for outfits
 - Alternate brightness of rows to easily discern one outfit from another
