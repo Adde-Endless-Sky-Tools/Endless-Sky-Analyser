@@ -1,4 +1,7 @@
 # Analyser
+## 2nd June 2023
+### Minor
+- Hide irrelevant calculations for outfits
 ## 26th May 2023
 ### Major
 ```diff
