@@ -199,71 +199,87 @@ function sortEngines(value,id){
 }
 function printOutput(){
 	document.getElementById(`output`).innerHTML=``
+	var alternation=0
 	if(filter==`regenerators`){
 		for(i1=0;i1<regenerators.length;i1++){
 			if(regenerators[i1][3].length||regenerators[i1][7].length){
-				document.getElementById(`output`).innerHTML+=regenerators[i1][0]
+				if(alternation%2==0)
+					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`">`+regenerators[i1][0]
+				else
+					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`" style="filter:brightness(75%);">`+regenerators[i1][0]
 				if(regenerators[i1][4]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:260px;">`+Math.round(regenerators[i1][4]*100*60)/100+`</span>`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:260px;">`+Math.round(regenerators[i1][4]*100*60)/100+`</span>`
 				if(regenerators[i1][6]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:310px;">`+Math.round(regenerators[i1][6]*100)/100+`</span>`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:310px;">`+Math.round(regenerators[i1][6]*100)/100+`</span>`
 				if(regenerators[i1][8]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:350px;">`+Math.round(regenerators[i1][8]*100*60)/100+`</span>`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:350px;">`+Math.round(regenerators[i1][8]*100*60)/100+`</span>`
 				if(regenerators[i1][10]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:390px;">`+Math.round(regenerators[i1][10]*100)/100+`</span>`
-				document.getElementById(`output`).innerHTML+=`\n`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:390px;">`+Math.round(regenerators[i1][10]*100)/100+`</span>`
+				alternation++
 			}
 		}
 	}
 	if(filter==`cooling`){
 		for(i1=0;i1<cooling.length;i1++){
 			if(cooling[i1][3].length||cooling[i1][4].length){
-				document.getElementById(`output`).innerHTML+=cooling[i1][0]
+				if(alternation%2==0)
+					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`">`+cooling[i1][0]
+				else
+					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`" style="filter:brightness(75%);">`+cooling[i1][0]
 				if(cooling[i1][5]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:260px;">`+Math.round(cooling[i1][5]*100*60)/100+`</span>`
-				document.getElementById(`output`).innerHTML+=`\n`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:260px;">`+Math.round(cooling[i1][5]*100*60)/100+`</span>`
+				alternation++
 			}
 		}
 	}
 	if(filter==`fuel`){
 		for(i1=0;i1<fuel.length;i1++){
 			if(fuel[i1][3].length||fuel[i1][5].length){
-				document.getElementById(`output`).innerHTML+=fuel[i1][0]
+				if(alternation%2==0)
+					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`">`+fuel[i1][0]
+				else
+					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`" style="filter:brightness(75%);">`+fuel[i1][0]
 				if(fuel[i1][4]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:260px;">`+Math.round(fuel[i1][4]*100)/100+`</span>`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:260px;">`+Math.round(fuel[i1][4]*100)/100+`</span>`
 				if(fuel[i1][6]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:310px;">`+Math.round(fuel[i1][6]*100)/100+`</span>`
-				document.getElementById(`output`).innerHTML+=`\n`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:310px;">`+Math.round(fuel[i1][6]*100)/100+`</span>`
+				alternation++
 			}
 		}
 	}
 	if(filter==`power`){
 		for(i1=0;i1<power.length;i1++){
 			if(power[i1][1]==`Power`){
-				document.getElementById(`output`).innerHTML+=power[i1][0]
+				if(alternation%2==0)
+					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`">`+power[i1][0]
+				else
+					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`" style="filter:brightness(75%);">`+power[i1][0]
 				if(power[i1][4]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:260px;">`+Math.round(power[i1][4]*100*60)/100+`</span>`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:260px;">`+Math.round(power[i1][4]*100*60)/100+`</span>`
 				if(power[i1][6]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:310px;">`+Math.round(power[i1][6]*100)/100+`</span>`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:310px;">`+Math.round(power[i1][6]*100)/100+`</span>`
 				if(power[i1][8]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:350px;">`+Math.round(power[i1][8]*100)/100+`</span>`
-				document.getElementById(`output`).innerHTML+=`\n`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:350px;">`+Math.round(power[i1][8]*100)/100+`</span>`
+				alternation++
 			}
 		}
 	}
 	if(filter==`engines`){
 		for(i1=0;i1<engines.length;i1++){
 			if(engines[i1][1]==`Engines`){
-				document.getElementById(`output`).innerHTML+=engines[i1][0]
+				if(alternation%2==0)
+					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`">`+engines[i1][0]
+				else
+					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`" style="filter:brightness(75%);">`+engines[i1][0]
 				if(engines[i1][4]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:260px;">`+Math.round(engines[i1][4]*100*60)/100+`</span>`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:260px;">`+Math.round(engines[i1][4]*100*60)/100+`</span>`
 				if(engines[i1][6]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:310px;">`+Math.round(engines[i1][6]*100*60)/100+`</span>`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:310px;">`+Math.round(engines[i1][6]*100*60)/100+`</span>`
 				if(engines[i1][8]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:380px;">`+Math.round(engines[i1][8]*100*60)/100+`</span>`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:380px;">`+Math.round(engines[i1][8]*100*60)/100+`</span>`
 				if(engines[i1][10]!=0)
-					document.getElementById(`output`).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:440px;">`+Math.round(engines[i1][10]*100*60)/100+`</span>`
-				document.getElementById(`output`).innerHTML+=`\n`
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:440px;">`+Math.round(engines[i1][10]*100*60)/100+`</span>`
+				alternation++
 			}
 		}
 	}

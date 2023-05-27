@@ -2,6 +2,7 @@
 ## 2nd June 2023
 ### Minor
 - Hide irrelevant calculations for outfits
+- Alternate brightness of rows to easily discern one outfit from another
 ## 26th May 2023
 ### Major
 ```diff
