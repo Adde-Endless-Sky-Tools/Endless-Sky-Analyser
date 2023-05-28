@@ -17,31 +17,33 @@
 		<label id="engines" class="blocked dark" style="left:538px;top:10px;" onClick="filterCalculations(this.id),printOutput()">Engines</label>
 		<!--	Bottom level menu	-->
 		<div id="regeneratorsSort" class="hidden">
-			<label id="ShieldSpace" class="dark tooltipBottom" style="left:280px;top:30px;" tooltip="Shield Generation per Outfit Space" onClick="sortRegenerators(4,this.id)">S/S</label>
-			<label id="ShieldEnergy" class="dark tooltipBottom" style="left:330px;top:30px;" tooltip="Shield Generation per Shield Energy" onClick="sortRegenerators(6,this.id)">S/E</label>
-			<label id="HullSpace" class="dark tooltipBottom" style="left:370px;top:30px;" tooltip="Hull Repair per Outfit Space" onClick="sortRegenerators(8,this.id)">H/S</label>
-			<label id="HullEnergy" class="dark tooltipBottom" style="left:410px;top:30px;" tooltip="Hull Repair per Hull Energy" onClick="sortRegenerators(10,this.id)">H/E</label>
+			<label id="ShieldSpace" class="dark tooltipBottom" style="left:280px;top:30px;" tooltip="Shield Generation per Outfit Space" onClick="sortRegenerators(5,this.id)">S/S</label>
+			<label id="ShieldEnergy" class="dark tooltipBottom" style="left:330px;top:30px;" tooltip="Shield Generation per Shield Energy" onClick="sortRegenerators(7,this.id)">S/E</label>
+			<label id="HullSpace" class="dark tooltipBottom" style="left:370px;top:30px;" tooltip="Hull Repair per Outfit Space" onClick="sortRegenerators(9,this.id)">H/S</label>
+			<label id="HullEnergy" class="dark tooltipBottom" style="left:410px;top:30px;" tooltip="Hull Repair per Hull Energy" onClick="sortRegenerators(11,this.id)">H/E</label>
 		</div>
 		<div id="coolingSort" class="hidden">
-			<label id="CoolingSpace" class="dark tooltipBottom" style="left:280px;top:30px;" tooltip="Cooling (passive+active) per Outfit Space" onClick="sortCooling(5,this.id)">C/S</label>
+			<label id="CoolingSpace" class="dark tooltipBottom" style="left:280px;top:30px;" tooltip="Cooling (passive+active) per Outfit Space" onClick="sortCooling(6,this.id)">C/S</label>
 		</div>
 		<div id="fuelSort" class="hidden">
-			<label id="FuelCapacitySpace" class="dark tooltipBottom" style="left:280px;top:30px;" tooltip="Fuel Capacity per Outfit Space" onClick="sortFuel(4,this.id)">C/S</label>
-			<label id="RamscoopSpace" class="dark tooltipBottom" style="left:330px;top:30px;" tooltip="Ramscoop per Outfit Space" onClick="sortFuel(6,this.id)">R/S</label>
+			<label id="FuelCapacitySpace" class="dark tooltipBottom" style="left:280px;top:30px;" tooltip="Fuel Capacity per Outfit Space" onClick="sortFuel(5,this.id)">C/S</label>
+			<label id="RamscoopSpace" class="dark tooltipBottom" style="left:330px;top:30px;" tooltip="Ramscoop per Outfit Space" onClick="sortFuel(7,this.id)">R/S</label>
 		</div>
 		<div id="powerSort" class="hidden">
-			<label id="EnergyGenerationSpace" class="dark tooltipBottom" style="left:280px;top:30px;" tooltip="Energy Generation per Outfit Space" onClick="sortPower(4,this.id)">G/S</label>
-			<label id="EnergyGenerationHeat" class="dark tooltipBottom" style="left:330px;top:30px;" tooltip="Energy Generation per Heat Generation" onClick="sortPower(6,this.id)">G/H</label>
-			<label id="EnergyCapacitySpace" class="dark tooltipBottom" style="left:370px;top:30px;" tooltip="Energy Capacity per Outfit Space" onClick="sortPower(8,this.id)">C/S</label>
+			<label id="EnergyGenerationSpace" class="dark tooltipBottom" style="left:280px;top:30px;" tooltip="Energy Generation per Outfit Space" onClick="sortPower(5,this.id)">G/S</label>
+			<label id="EnergyGenerationHeat" class="dark tooltipBottom" style="left:330px;top:30px;" tooltip="Energy Generation per Heat Generation" onClick="sortPower(7,this.id)">G/H</label>
+			<label id="EnergyCapacitySpace" class="dark tooltipBottom" style="left:370px;top:30px;" tooltip="Energy Capacity per Outfit Space" onClick="sortPower(9,this.id)">C/S</label>
 		</div>
 		<div id="enginesSort" class="hidden">
-			<label id="ThrustSpace" class="dark tooltipBottom" style="left:280px;top:30px;" tooltip="Thrust per Engine Capacity" onClick="sortEngines(4,this.id)">Th/S</label>
-			<label id="AfterburnerThrustSpace" class="dark tooltipBottom" style="left:330px;top:30px;" tooltip="Afterburner Thrust per Engine Capacity" onClick="sortEngines(6,this.id)">ATh/S</label>
-			<label id="ReverseThrustSpace" class="dark tooltipBottom" style="left:400px;top:30px;" tooltip="Reverse Thrust per Engine/Weapon Capacity (lowest)" onClick="sortEngines(8,this.id)">RTh/S</label>
-			<label id="TurnSpace" class="dark tooltipBottom" style="left:460px;top:30px;" tooltip="Turn per Engine Capacity" onClick="sortEngines(10,this.id)">Tu/S</label>
+			<label id="ThrustSpace" class="dark tooltipBottom" style="left:280px;top:30px;" tooltip="Thrust per Engine Capacity" onClick="sortEngines(5,this.id)">Th/S</label>
+			<label id="AfterburnerThrustSpace" class="dark tooltipBottom" style="left:330px;top:30px;" tooltip="Afterburner Thrust per Engine Capacity" onClick="sortEngines(7,this.id)">ATh/S</label>
+			<label id="ReverseThrustSpace" class="dark tooltipBottom" style="left:400px;top:30px;" tooltip="Reverse Thrust per Engine/Weapon Capacity (lowest)" onClick="sortEngines(9,this.id)">RTh/S</label>
+			<label id="TurnSpace" class="dark tooltipBottom" style="left:460px;top:30px;" tooltip="Turn per Engine Capacity" onClick="sortEngines(11,this.id)">Tu/S</label>
 		</div>
+		<label id="sortFactions" class="dark hidden" style="right:20px;top:20px;" onClick="sortFactions()">Factions</label>
 		<!--	Output	-->
 		<p id="output"></p>
 	</body>
+	<script type="text/javascript" src="lookup.js"></script>
 	<script type="text/javascript" src="scriptsheet.js"></script>
 </html>

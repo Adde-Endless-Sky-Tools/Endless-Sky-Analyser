@@ -3,6 +3,7 @@
 ### Major
 ```diff
 +	Reveal tooltips for calculation columns, explaining the full equation
++	Display faction ownership of outfits and allow sorting outfits by faction
 ```
 ### Minor
 - Hide irrelevant calculations for outfits
