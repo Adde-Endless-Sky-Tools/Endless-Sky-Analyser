@@ -26,7 +26,7 @@ function uploadFiles(that){
 				//	Outfits
 				if(/^outfit\s/.test(lines[i2])){
 					regenerators.push([lines[i2].slice(7),[27],[],[],[],[],[],[],[],[],[],[]])
-					cooling.push([lines[i2].slice(7),[27],[],[],[],[],[]])
+					cooling.push([lines[i2].slice(7),[27],[],[],[],[],[],[],[]])
 					fuel.push([lines[i2].slice(7),[27],[],[],[],[],[],[]])
 					power.push([lines[i2].slice(7),[27],[],[],[],[],[],[],[],[]])
 					engines.push([lines[i2].slice(7),[27],[],[[],[]],[],[],[],[],[],[],[],[]])
@@ -102,6 +102,10 @@ function compileCooling(){
 		if(cooling[cooling.length-1][6]==-Infinity)
 			cooling[cooling.length-1][6]=cooling[cooling.length-1][6]*-1
 	}
+	if(/^\t"*cooling energy"*/.test(lines[i3]))
+		cooling[cooling.length-1][7]=lines[i3].replaceAll(`"`,``).slice(16)
+	if(cooling[cooling.length-1][5].length&&cooling[cooling.length-1][7].length)
+		cooling[cooling.length-1][8]=cooling[cooling.length-1][5]/cooling[cooling.length-1][7]
 }
 function compileFuel(){
 	if(/^\t"*fuel capacity"*/.test(lines[i3]))
@@ -305,6 +309,8 @@ function printOutput(){
 					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`" style="filter:brightness(75%);">`+cooling[i1][0]
 				if(cooling[i1][6]!=0)
 					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(0,175,184,.75);left:260px;">`+Math.round(cooling[i1][6]*100*60)/100+`</span>`
+				if(cooling[i1][8]!=0)
+					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(187,85,22,.75);left:320px;">`+Math.round(cooling[i1][8]*100)/100+`</span>`
 				if(factionLookupString.get(cooling[i1][0]))
 					document.getElementById(`output`+i1).innerHTML+=`<span style="color:rgba(0,175,184,.75);right:20px;">`+factionLookupString.get(cooling[i1][0])+`</span>`
 				else
