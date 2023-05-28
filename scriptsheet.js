@@ -202,7 +202,7 @@ function printOutput(){
 	var alternation=0
 	if(filter==`regenerators`){
 		for(i1=0;i1<regenerators.length;i1++){
-			if(regenerators[i1][3].length||regenerators[i1][7].length){
+			if(regenerators[i1][4]!=0||regenerators[i1][6]!=0||regenerators[i1][8]!=0||regenerators[i1][10]!=0){
 				if(alternation%2==0)
 					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`">`+regenerators[i1][0]
 				else
@@ -221,7 +221,7 @@ function printOutput(){
 	}
 	if(filter==`cooling`){
 		for(i1=0;i1<cooling.length;i1++){
-			if(cooling[i1][3].length||cooling[i1][4].length){
+			if(cooling[i1][5]!=0){
 				if(alternation%2==0)
 					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`">`+cooling[i1][0]
 				else
@@ -234,7 +234,7 @@ function printOutput(){
 	}
 	if(filter==`fuel`){
 		for(i1=0;i1<fuel.length;i1++){
-			if(fuel[i1][3].length||fuel[i1][5].length){
+			if(fuel[i1][4]!=0||fuel[i1][6]!=0){
 				if(alternation%2==0)
 					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`">`+fuel[i1][0]
 				else
@@ -249,7 +249,7 @@ function printOutput(){
 	}
 	if(filter==`power`){
 		for(i1=0;i1<power.length;i1++){
-			if(power[i1][1]==`Power`){
+			if(power[i1][4]!=0||power[i1][6]!=0||power[i1][8]!=0){
 				if(alternation%2==0)
 					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`">`+power[i1][0]
 				else
@@ -266,7 +266,7 @@ function printOutput(){
 	}
 	if(filter==`engines`){
 		for(i1=0;i1<engines.length;i1++){
-			if(engines[i1][1]==`Engines`){
+			if(engines[i1][4]!=0||engines[i1][6]!=0||engines[i1][8]!=0||engines[i1][10]!=0){
 				if(alternation%2==0)
 					document.getElementById(`output`).innerHTML+=`<p id="output`+i1+`">`+engines[i1][0]
 				else

@@ -6,6 +6,7 @@
 ```
 ### Minor
 - Hide irrelevant calculations for outfits
+- Filter outfits only by existence of relevant stats
 - Alternate brightness of rows to easily discern one outfit from another
 ## 26th May 2023
 ### Major
