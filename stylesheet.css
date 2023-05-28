@@ -22,6 +22,9 @@ label:hover{
 	animation:highlightOn .5s forwards;
 	cursor:pointer;
 }
+p:hover{
+	border:1px solid #aaa;
+}
 span{
 	position:absolute;
 }
@@ -68,6 +71,7 @@ span{
 }
 /*	Output	*/
 #output{
+	border:none;
 	left:20px;
 	padding-bottom:20px;
 	position:absolute;
