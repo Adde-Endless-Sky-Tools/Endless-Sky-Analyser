@@ -70,7 +70,6 @@ function uploadFiles(that){
 			}
 		}
 	}
-	document.getElementById(`sortFactions`).classList.remove(`hidden`)
 	setTimeout(sortFactions,1000)
 }
 function compileRegenerators(){
@@ -153,7 +152,6 @@ function compileEngines(){
 		engines[engines.length-1][11]=(engines[engines.length-1][10]/engines[engines.length-1][3][0])*-1
 }
 function filterCalculations(index){
-	document.getElementById(`sortFactions`).classList.add(`dark`)
 	document.getElementById(`regenerators`).classList.add(`dark`)
 	document.getElementById(`regeneratorsSort`).classList.add(`hidden`)
 	document.getElementById(`cooling`).classList.add(`dark`)
@@ -174,7 +172,6 @@ function filterCalculations(index){
 }
 function sortFactions(){
 	factionBreak=1
-	document.getElementById(`sortFactions`).classList.remove(`dark`)
 	document.getElementById(`ShieldSpace`).classList.add(`dark`)
 	document.getElementById(`ShieldEnergy`).classList.add(`dark`)
 	document.getElementById(`HullSpace`).classList.add(`dark`)
@@ -212,7 +209,6 @@ function sortFactions(){
 }
 function sortRegenerators(value,id){
 	factionBreak=0
-	document.getElementById(`sortFactions`).classList.add(`dark`)
 	document.getElementById(`ShieldSpace`).classList.add(`dark`)
 	document.getElementById(`ShieldEnergy`).classList.add(`dark`)
 	document.getElementById(`HullSpace`).classList.add(`dark`)
@@ -224,7 +220,6 @@ function sortRegenerators(value,id){
 }
 function sortCooling(value,id){
 	factionBreak=0
-	document.getElementById(`sortFactions`).classList.add(`dark`)
 	document.getElementById(`CoolingSpace`).classList.add(`dark`)
 	if(id)
 		document.getElementById(id).classList.remove(`dark`)
@@ -233,7 +228,6 @@ function sortCooling(value,id){
 }
 function sortFuel(value,id){
 	factionBreak=0
-	document.getElementById(`sortFactions`).classList.add(`dark`)
 	document.getElementById(`FuelCapacitySpace`).classList.add(`dark`)
 	document.getElementById(`RamscoopSpace`).classList.add(`dark`)
 	if(id)
@@ -243,7 +237,6 @@ function sortFuel(value,id){
 }
 function sortPower(value,id){
 	factionBreak=0
-	document.getElementById(`sortFactions`).classList.add(`dark`)
 	document.getElementById(`EnergyGenerationSpace`).classList.add(`dark`)
 	document.getElementById(`EnergyGenerationHeat`).classList.add(`dark`)
 	document.getElementById(`EnergyCapacitySpace`).classList.add(`dark`)
@@ -254,7 +247,6 @@ function sortPower(value,id){
 }
 function sortEngines(value,id){
 	factionBreak=0
-	document.getElementById(`sortFactions`).classList.add(`dark`)
 	document.getElementById(`ThrustSpace`).classList.add(`dark`)
 	document.getElementById(`AfterburnerThrustSpace`).classList.add(`dark`)
 	document.getElementById(`ReverseThrustSpace`).classList.add(`dark`)

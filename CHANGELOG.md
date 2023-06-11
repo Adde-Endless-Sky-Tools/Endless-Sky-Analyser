@@ -1,4 +1,7 @@
 # Analyser
+## 16th June 2023
+### Minor
+- Remove indicator for faction sorting
 ## 2nd June 2023
 ### Major
 ```diff
